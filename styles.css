@@ -51,6 +51,8 @@ header {
     align-items: center;
     text-decoration: none;
     transition: opacity 0.3s;
+    max-width: 150px;
+    height: auto;
 }
 
 .logo:hover {
@@ -58,9 +60,9 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 40px;
     width: auto;
-    max-width: 200px;
+    max-width: 100%;
     object-fit: contain;
     display: block;
 }
@@ -657,11 +659,12 @@ footer {
 
     .logo {
         font-size: 1.5rem;
+        max-width: 120px;
     }
 
     .logo img {
-        height: 40px;
-        max-width: 150px;
+        height: 30px;
+        max-width: 100%;
     }
 
     .footer-logo img {
