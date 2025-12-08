@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Fuentes</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .test-section {
+            margin: 2rem 0;
+            padding: 1rem;
+            border: 2px solid #d4af37;
+            border-radius: 5px;
+        }
+        .font-name {
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 0.5rem;
+        }
+        .book-antigua { font-family: 'Book Antigua', serif; }
+        .book-antigua-bold { font-family: 'Book Antigua', serif; font-weight: bold; }
+        .bellerose { font-family: 'Bellerose', cursive; }
+    </style>
+</head>
+<body>
+    <div style="max-width: 800px; margin: 50px auto; padding: 20px;">
+        <h1 style="text-align: center; color: #d4af37;">Prueba de Fuentes Personalizadas</h1>
+        
+        <div class="test-section">
+            <div class="font-name">Book Antigua (Regular):</div>
+            <div class="book-antigua" style="font-size: 24px;">
+                The quick brown fox jumps over the lazy dog
+                <br>
+                El veloz murciélago hindú comía feliz cardillo y kiwi
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="font-name">Book Antigua (Bold):</div>
+            <div class="book-antigua-bold" style="font-size: 24px;">
+                The quick brown fox jumps over the lazy dog
+                <br>
+                El veloz murciélago hindú comía feliz cardillo y kiwi
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="font-name">Bellerose (Decorativa):</div>
+            <div class="bellerose" style="font-size: 32px;">
+                The quick brown fox jumps over the lazy dog
+                <br>
+                El veloz murciélago hindú comía feliz cardillo y kiwi
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <div class="font-name">Fuente del Body (debería ser Book Antigua):</div>
+            <div style="font-size: 18px;">
+                Este texto debería usar la fuente Book Antigua porque es el estilo del body.
+                <br>
+                Si ves Georgia o Times New Roman, las fuentes personalizadas no se están cargando.
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem; padding: 1rem; background: #f5f5f5; border-radius: 5px;">
+            <h3>Instrucciones para probar:</h3>
+            <ol>
+                <li>Abre este archivo en tu navegador (test-fonts.html)</li>
+                <li>Presiona F12 para abrir las herramientas de desarrollador</li>
+                <li>Ve a la pestaña "Network" (Red)</li>
+                <li>Recarga la página (Ctrl+R o F5)</li>
+                <li>Busca archivos .TTF o .ttf en la lista</li>
+                <li>Si aparecen en rojo o con error 404, las rutas están incorrectas</li>
+                <li>Si aparecen en verde (200), las fuentes se cargaron correctamente</li>
+            </ol>
+            <p><strong>Nota:</strong> Si estás abriendo el archivo directamente (file://), puede haber problemas de CORS. 
+            Es mejor usar un servidor local como Live Server o Python: <code>python -m http.server 8000</code></p>
+        </div>
+    </div>
+</body>
+</html>
