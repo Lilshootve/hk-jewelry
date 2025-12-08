@@ -11,7 +11,7 @@ window.addEventListener('load', function() {
     }
 });
 
-// Sistema de Notificaciones Toast Elegante
+// Sistema de Notificaciones Toast Elegante con soporte para error
 function showToast(message, type = 'success') {
     // Eliminar toast anterior si existe
     const existingToast = document.querySelector('.toast-notification');
@@ -21,9 +21,10 @@ function showToast(message, type = 'success') {
 
     const toast = document.createElement('div');
     toast.className = `toast-notification toast-${type}`;
+    const icon = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
     toast.innerHTML = `
         <div class="toast-content">
-            <span class="toast-icon">${type === 'success' ? '✓' : '✕'}</span>
+            <span class="toast-icon">${icon}</span>
             <span class="toast-message">${message}</span>
         </div>
     `;
@@ -214,12 +215,223 @@ document.addEventListener('DOMContentLoaded', function() {
     function performSearch() {
         const searchTerm = searchInput.value.trim();
         if (searchTerm) {
-            showToast(`Buscando: ${searchTerm}...`, 'success');
-            setTimeout(() => {
+            // Si estamos en products.html, filtrar directamente
+            if (window.location.pathname.includes('products.html')) {
+                filterProducts(searchTerm);
+            } else {
+                // Si estamos en otra página, redirigir a products.html con el término de búsqueda
                 window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
-            }, 500);
+            }
+        } else {
+            showToast('Por favor ingresa un término de búsqueda', 'error');
         }
     }
+
+    // Función para filtrar productos en la página de productos
+    function filterProducts(searchTerm) {
+        if (!searchTerm || searchTerm.trim() === '') {
+            clearSearch();
+            return;
+        }
+
+        const productCards = document.querySelectorAll('.product-card');
+        const sections = document.querySelectorAll('.section[id^="hk-signature"], .section[id^="miami-luxe"], .section[id^="royal-diamonds"], .section[id^="custom-by-hk"]');
+        let foundCount = 0;
+        const searchLower = searchTerm.toLowerCase().trim();
+
+        productCards.forEach(card => {
+            const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const description = card.querySelector('p')?.textContent.toLowerCase() || '';
+            const badge = card.querySelector('.collection-badge')?.textContent.toLowerCase() || '';
+            
+            // Buscar también en palabras clave comunes
+            const keywords = ['diamond', 'diamante', 'gold', 'oro', 'ring', 'anillo', 
+                            'necklace', 'collar', 'bracelet', 'pulsera', 'earring', 'arete',
+                            'pendant', 'colgante', 'platinum', 'platino', 'sapphire', 'zafiro',
+                            'emerald', 'esmeralda', 'ruby', 'rubí', 'custom', 'personalizado'];
+            
+            const matchesTitle = title.includes(searchLower);
+            const matchesDescription = description.includes(searchLower);
+            const matchesBadge = badge.includes(searchLower);
+            const matchesKeywords = keywords.some(keyword => 
+                searchLower.includes(keyword) && (title.includes(keyword) || description.includes(keyword))
+            );
+            
+            const matches = matchesTitle || matchesDescription || matchesBadge || matchesKeywords;
+
+            if (matches) {
+                card.style.display = '';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, foundCount * 50);
+                foundCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Ocultar/mostrar secciones según productos visibles
+        sections.forEach(section => {
+            const sectionCards = section.querySelectorAll('.product-card');
+            let hasVisible = false;
+            
+            sectionCards.forEach(card => {
+                if (card.style.display !== 'none' && window.getComputedStyle(card).display !== 'none') {
+                    hasVisible = true;
+                }
+            });
+            
+            if (!hasVisible && foundCount > 0) {
+                section.style.display = 'none';
+            } else {
+                section.style.display = '';
+            }
+        });
+
+        // Mostrar mensaje de resultados
+        showSearchResults(searchTerm, foundCount);
+    }
+
+    // Función para mostrar resultados de búsqueda
+    function showSearchResults(term, count) {
+        // Eliminar mensaje anterior si existe
+        const existingMessage = document.getElementById('searchResultsMessage');
+        if (existingMessage) {
+            existingMessage.remove();
+        }
+
+        const message = document.createElement('div');
+        message.id = 'searchResultsMessage';
+        message.style.cssText = `
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+            border-left: 4px solid var(--color-gold);
+            border-radius: 0;
+            box-shadow: var(--shadow-md);
+            font-family: var(--font-primary);
+            text-align: center;
+        `;
+
+        if (count > 0) {
+            message.innerHTML = `
+                <strong style="color: var(--color-black); font-size: 1.1rem;">
+                    Se encontraron ${count} producto${count > 1 ? 's' : ''} para "${term}"
+                </strong>
+                <button onclick="clearSearch()" style="
+                    margin-left: 1rem;
+                    padding: 0.5rem 1rem;
+                    background: var(--color-gold);
+                    color: var(--color-black);
+                    border: none;
+                    cursor: pointer;
+                    font-family: var(--font-primary);
+                    font-weight: bold;
+                    border-radius: 0;
+                    transition: all 0.3s;
+                ">Limpiar búsqueda</button>
+            `;
+            showToast(`Se encontraron ${count} resultado${count > 1 ? 's' : ''}`, 'success');
+        } else {
+            message.innerHTML = `
+                <strong style="color: var(--color-black); font-size: 1.1rem;">
+                    No se encontraron productos para "${term}"
+                </strong>
+                <p style="margin-top: 0.5rem; color: var(--color-gray-dark);">
+                    Intenta con otros términos como: "diamond", "gold", "ring", "necklace", etc.
+                </p>
+                <button onclick="clearSearch()" style="
+                    margin-top: 1rem;
+                    padding: 0.5rem 1rem;
+                    background: var(--color-gold);
+                    color: var(--color-black);
+                    border: none;
+                    cursor: pointer;
+                    font-family: var(--font-primary);
+                    font-weight: bold;
+                    border-radius: 0;
+                    transition: all 0.3s;
+                ">Mostrar todos los productos</button>
+            `;
+            showToast('No se encontraron resultados', 'error');
+        }
+
+        // Insertar mensaje después del header de introducción
+        const introSection = document.querySelector('.section[style*="padding-top: 40px"]');
+        if (introSection) {
+            introSection.after(message);
+        } else {
+            const firstSection = document.querySelector('.section');
+            if (firstSection) {
+                firstSection.before(message);
+            }
+        }
+    }
+
+    // Función global para limpiar búsqueda
+    window.clearSearch = function() {
+        const productCards = document.querySelectorAll('.product-card');
+        const sections = document.querySelectorAll('.section[id^="hk-signature"], .section[id^="miami-luxe"], .section[id^="royal-diamonds"], .section[id^="custom-by-hk"]');
+        
+        productCards.forEach((card, index) => {
+            card.style.display = '';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 30);
+        });
+        
+        sections.forEach(section => {
+            section.style.display = '';
+        });
+
+        const message = document.getElementById('searchResultsMessage');
+        if (message) {
+            message.style.opacity = '0';
+            setTimeout(() => message.remove(), 300);
+        }
+
+        // Limpiar input de búsqueda
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.value = '';
+        }
+
+        // Limpiar parámetro de URL
+        if (window.location.search.includes('search=')) {
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        // Scroll suave hacia arriba
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        showToast('Búsqueda limpiada', 'success');
+    };
+
+    // Si hay un parámetro de búsqueda en la URL, ejecutar búsqueda automáticamente
+    setTimeout(() => {
+        if (window.location.pathname.includes('products.html') || window.location.pathname.endsWith('/')) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchParam = urlParams.get('search');
+            if (searchParam) {
+                // Establecer el valor en el input
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput) {
+                    searchInput.value = searchParam;
+                }
+                // Ejecutar búsqueda después de que la página cargue completamente
+                setTimeout(() => {
+                    filterProducts(searchParam);
+                }, 800);
+            }
+        }
+    }, 100);
 
     // Efecto de cursor personalizado para elementos interactivos
     const interactiveElements = document.querySelectorAll('a, button, .product-card, .collection-card');

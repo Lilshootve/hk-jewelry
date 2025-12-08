@@ -1777,6 +1777,11 @@ a, button, .product-card, .collection-card {
     color: white;
 }
 
+.toast-error .toast-icon {
+    background: #f44336;
+    color: white;
+}
+
 /* Efectos de carga elegantes */
 .loading-shimmer {
     background: linear-gradient(90deg, 
@@ -1916,6 +1921,17 @@ img.loaded {
 .category-card:hover::before {
     width: 300px;
     height: 300px;
+}
+
+/* Estilos para mensaje de resultados de búsqueda */
+#searchResultsMessage {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+#searchResultsMessage button:hover {
+    background: var(--color-gold-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 /* Efectos de mouse tracking premium (opcional) */
