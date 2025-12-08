@@ -50,6 +50,15 @@
     font-display: swap;
 }
 
+/* Fuente YD Yoonche M para títulos de Heroes */
+@font-face {
+    font-family: 'YD Yoonche M';
+    src: url('assets/fonts/yd-yoonche-m.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -367,9 +376,9 @@ nav ul li a:hover::after {
 }
 
 .hero-content h1 {
-    font-family: 'Berlin Sans', 'Helvetica Neue', Arial, sans-serif !important;
+    font-family: 'YD Yoonche M', 'Berlin Sans', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 3.5rem;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     letter-spacing: 1px;
