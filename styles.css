@@ -70,22 +70,35 @@
     --font-decorative: 'Bellerose', cursive !important;
 }
 
-body {
+/* Aplicar fuente globalmente PRIMERO - esto asegura que se aplique a todo */
+html, body, * {
     font-family: 'Book Antigua', 'Georgia', serif !important;
+}
+
+body {
     color: var(--color-text);
     line-height: 1.6;
     background-color: var(--color-white);
+    font-family: 'Book Antigua', 'Georgia', serif !important;
 }
 
-/* Aplicar fuente globalmente a todos los elementos de texto */
-p, span, div, a, li, td, th, label, input, textarea, select, button {
+/* Elementos específicos con refuerzo */
+p, span, div, a, li, td, th, label, button, 
+h1, h2, h3, h4, h5, h6,
+input[type="search"],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
     font-family: 'Book Antigua', 'Georgia', serif !important;
 }
 
 /* Excepciones para elementos decorativos */
 .logo-text,
 .decorative-text {
-    font-family: var(--font-decorative);
+    font-family: 'Bellerose', cursive !important;
 }
 
 /* Header y Navegación */
