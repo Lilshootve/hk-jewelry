@@ -107,11 +107,11 @@ select {
     font-family: 'Bellerose', cursive !important;
 }
 
-/* Header y Navegación */
+/* Header y Navegación - FONDO BLANCO Y TEXTO NEGRO */
 header {
-    background-color: #ffffff !important;
     background: #ffffff !important;
-    color: var(--color-black) !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -120,15 +120,29 @@ header {
     border-bottom: 1px solid #e0e0e0;
 }
 
-header * {
-    background-color: transparent !important;
+/* Forzar fondo blanco en container del header */
+.header-container {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
 }
 
-.header-container,
-.header-top,
-.header-bottom {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
+/* Todos los elementos dentro del header con texto negro */
+header,
+header *,
+header div,
+header nav,
+header ul,
+header li,
+header a,
+header p,
+header span {
+    color: #000000 !important;
+}
+
+/* Excepciones - mantener color dorado del logo-text */
+.logo-text,
+.logo-text * {
+    color: var(--color-gold) !important;
 }
 
 .header-container {
@@ -201,7 +215,7 @@ header .logo img {
     font-family: var(--font-decorative);
     font-size: 1.8rem;
     font-weight: normal;
-    color: var(--color-gold);
+    color: var(--color-gold) !important;
     letter-spacing: 2px;
     margin-left: 10px;
 }
@@ -218,7 +232,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: var(--color-black);
+    color: #000000 !important;
     text-decoration: none;
     font-size: 0.95rem;
     font-family: 'Berlin Sans', 'Helvetica Neue', Arial, sans-serif !important;
@@ -230,7 +244,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--color-gold);
+    color: var(--color-gold) !important;
 }
 
 nav ul li a::after {
