@@ -1,4 +1,199 @@
 /* HK Jewelry Corp - Estilos Globales */
+
+/* Font Face Declarations - Pepi */
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-Regular-BF676cc1720c98c.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-Italic-BF676cc171df95e.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-Light-BF676cc17205955.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-LightItalic-BF676cc171d6a41.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-Medium-BF676cc171efb6c.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-MediumItalic-BF676cc171dcd6c.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-SemiBold-BF676cc171edf1b.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-SemiBoldItalic-BF676cc171c703f.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-Bold-BF676cc171e9076.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-BoldItalic-BF676cc171bac84.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-Heavy-BF676cc171ee384.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pepi';
+    src: url('assets/fonts/PepiTRIAL-Black-BF676cc171e13ab.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Font Face Declarations - Rudi */
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-Regular-BF676cc171c2ad6.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-Italic-BF676cc17228325.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-Light-BF676cc171ee3cc.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-LightItalic-BF676cc17227b47.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-Medium-BF676cc172045ed.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-MediumItalic-BF676cc172246ea.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-SemiBold-BF676cc17209bfd.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-SemiBoldItalic-BF676cc1722c06a.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-Bold-BF676cc17237a19.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-BoldItalic-BF676cc17217644.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-Heavy-BF676cc172400c3.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rudi';
+    src: url('assets/fonts/RudiTRIAL-Black-BF676cc17236412.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,43 +209,8 @@
     --color-gray: #f5f5f5;
     --color-gray-dark: #333333;
     --color-text: #2c2c2c;
-    --font-primary: 'Pepi', 'Georgia', serif;
-    --font-secondary: 'Rudi', 'Helvetica', sans-serif;
-}
-
-/* Tipografías de marca */
-@font-face {
-    font-family: 'Pepi';
-    src: url('assets/fonts/PepiTRIAL-VariableVF-BF676cc17250f8c.ttf') format('truetype'),
-         url('assets/fonts/PepiTRIAL-Regular-BF676cc1720c98c.otf') format('opentype');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Pepi';
-    src: url('assets/fonts/PepiTRIAL-Italic-BF676cc171df95e.otf') format('opentype');
-    font-weight: 100 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rudi';
-    src: url('assets/fonts/RudiTRIAL-VariableVF-BF676cc172524bb.ttf') format('truetype'),
-         url('assets/fonts/RudiTRIAL-Regular-BF676cc171c2ad6.otf') format('opentype');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rudi';
-    src: url('assets/fonts/RudiTRIAL-Italic-BF676cc17228325.otf') format('opentype');
-    font-weight: 100 900;
-    font-style: italic;
-    font-display: swap;
+    --font-primary: 'Pepi', 'Georgia', 'Times New Roman', serif;
+    --font-secondary: 'Rudi', 'Arial', 'Helvetica', sans-serif;
 }
 
 body {
@@ -60,169 +220,112 @@ body {
     background-color: var(--color-white);
 }
 
-/* Header Premium E-commerce - Two Row Layout */
+/* Header y Navegación */
 header {
-    background-color: #FFFFFF;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* First Row - Top Bar */
-.header-top {
-    max-width: 1400px;
+.header-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 12px 40px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #F0F0F0;
+    flex-wrap: wrap;
 }
 
-.header-logo {
+.logo {
     display: flex;
     align-items: center;
     text-decoration: none;
+    transition: opacity 0.3s;
+    max-width: 400px !important;
+    min-width: 200px !important;
+    height: auto;
     flex-shrink: 0;
 }
 
-.header-logo img {
-    height: 80px;
-    width: auto;
-    max-width: 300px;
+.logo:hover {
+    opacity: 0.8;
+}
+
+.logo img {
+    height: 80px !important;
+    width: 300px !important;
+    max-width: 400px !important;
+    min-width: 200px !important;
     object-fit: contain;
     display: block;
 }
 
-.header-contact {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    flex: 1;
-    justify-content: center;
+header .logo {
+    max-width: 400px !important;
+    min-width: 200px !important;
 }
 
-.header-contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #333333;
-    font-size: 0.875rem;
-    text-decoration: none;
-    font-family: var(--font-secondary);
-    transition: color 0.2s ease;
+header .logo img {
+    height: 80px !important;
+    width: 300px !important;
+    max-width: 400px !important;
+    min-width: 200px !important;
+    max-height: 100px !important;
+    min-height: 50px !important;
 }
 
-.header-contact-item:hover {
+.logo-text {
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    font-weight: bold;
     color: var(--color-gold);
+    letter-spacing: 2px;
+    margin-left: 10px;
 }
 
-.header-contact-item svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
+.logo:hover .logo-text {
+    color: var(--color-gold-light);
 }
 
-/* Second Row - Main Navigation */
-.header-main {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-}
-
-.header-nav {
-    flex: 1;
-}
-
-.header-nav ul {
+nav ul {
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    margin: 0;
-    padding: 0;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
-.header-nav ul li a {
-    color: #1A1A1A;
+nav ul li a {
+    color: var(--color-white);
     text-decoration: none;
-    font-family: var(--font-secondary);
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 0.95rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: color 0.2s ease;
+    letter-spacing: 1px;
+    transition: color 0.3s;
     position: relative;
-    padding: 20px 0;
-    display: block;
 }
 
-.header-nav ul li a:hover {
+nav ul li a:hover {
     color: var(--color-gold);
 }
 
-.header-nav ul li a::after {
+nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 1px;
-    bottom: 15px;
+    height: 2px;
+    bottom: -5px;
     left: 0;
     background-color: var(--color-gold);
-    transition: width 0.3s ease;
+    transition: width 0.3s;
 }
 
-.header-nav ul li a:hover::after {
+nav ul li a:hover::after {
     width: 100%;
-}
-
-/* Search Bar */
-.header-search {
-    position: relative;
-    width: 280px;
-    margin-left: 2rem;
-}
-
-.header-search-input {
-    width: 100%;
-    padding: 10px 40px 10px 16px;
-    border: 1px solid #E0E0E0;
-    border-radius: 2px;
-    font-family: var(--font-secondary);
-    font-size: 0.875rem;
-    color: #1A1A1A;
-    background-color: #FFFFFF;
-    transition: border-color 0.2s ease;
-}
-
-.header-search-input:focus {
-    outline: none;
-    border-color: var(--color-gold);
-}
-
-.header-search-input::placeholder {
-    color: #999999;
-    font-style: italic;
-}
-
-.header-search-icon {
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    pointer-events: none;
-    fill: #999999;
-}
-
-.header-search-input:focus + .header-search-icon {
-    fill: var(--color-gold);
 }
 
 /* Hero Section */
@@ -901,24 +1004,6 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .header-top {
-        padding: 12px 30px;
-    }
-    
-    .header-main {
-        padding: 0 30px;
-    }
-    
-    .header-nav ul {
-        gap: 1.5rem;
-    }
-    
-    .header-search {
-        width: 240px;
-    }
-}
-
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
@@ -928,51 +1013,16 @@ footer {
         font-size: 1.1rem;
     }
 
-    /* Header Responsive */
-    .header-top {
+    nav ul {
         flex-direction: column;
-        gap: 1rem;
-        padding: 15px 20px;
-        text-align: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 1rem;
     }
-    
-    .header-logo {
-        justify-content: center;
-    }
-    
-    .header-logo img {
-        height: 60px;
-        max-width: 250px;
-    }
-    
-    .header-contact {
+
+    .header-container {
         flex-direction: column;
-        gap: 0.75rem;
-        width: 100%;
-    }
-    
-    .header-main {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 20px;
-        gap: 1rem;
-    }
-    
-    .header-nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        width: 100%;
-    }
-    
-    .header-nav ul li a {
-        padding: 10px 0;
-        font-size: 0.8rem;
-    }
-    
-    .header-search {
-        width: 100%;
-        margin-left: 0;
+        align-items: flex-start;
     }
 
     .section-title {
@@ -1003,47 +1053,19 @@ footer {
         font-size: 2rem;
     }
 
-    /* Header Mobile Small */
-    .header-top {
-        padding: 12px 15px;
+    .logo {
+        font-size: 1.5rem;
+        max-width: 400px !important;
+        min-width: 200px !important;
     }
-    
-    .header-logo img {
-        height: 50px;
-        max-width: 200px;
-    }
-    
-    .header-contact-item {
-        font-size: 0.75rem;
-    }
-    
-    .header-contact-item svg {
-        width: 14px;
-        height: 14px;
-    }
-    
-    .header-main {
-        padding: 12px 15px;
-    }
-    
-    .header-nav ul {
-        gap: 0.75rem;
-    }
-    
-    .header-nav ul li a {
-        font-size: 0.75rem;
-        padding: 8px 0;
-    }
-    
-    .header-search-input {
-        padding: 8px 35px 8px 12px;
-        font-size: 0.8rem;
-    }
-    
-    .header-search-icon {
-        width: 16px;
-        height: 16px;
-        right: 10px;
+
+    .logo img {
+        height: 70px !important;
+        width: 250px !important;
+        max-width: 400px !important;
+        min-width: 200px !important;
+        max-height: 100px !important;
+        min-height: 50px !important;
     }
 
     .footer-logo img {
