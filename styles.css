@@ -247,6 +247,12 @@ nav ul li a:hover {
     color: var(--color-gold) !important;
 }
 
+/* Forzar texto negro en todos los enlaces del header */
+header nav ul li a,
+header a {
+    color: #000000 !important;
+}
+
 nav ul li a::after {
     content: '';
     position: absolute;
