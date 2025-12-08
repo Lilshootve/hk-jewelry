@@ -41,14 +41,27 @@
     font-display: swap;
 }
 
-/* Si tienes la fuente Berlin, descomenta y ajusta la ruta:
+/* Fuente Berlin Sans para Heroes */
+/* Si tienes el archivo de Berlin Sans, actualiza la ruta aquí: */
 @font-face {
-    font-family: 'Berlin';
-    src: url('assets/fonts/Berlin-[archivo].ttf') format('truetype');
+    font-family: 'Berlin Sans';
+    src: url('assets/fonts/Berlin-Sans.ttf') format('truetype'),
+         url('assets/fonts/BerlinSans-Regular.ttf') format('truetype'),
+         url('assets/fonts/BerlinSans.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
-*/
+
+@font-face {
+    font-family: 'Berlin Sans';
+    src: url('assets/fonts/Berlin-Sans-Bold.ttf') format('truetype'),
+         url('assets/fonts/BerlinSans-Bold.ttf') format('truetype'),
+         url('assets/fonts/BerlinSans-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
 
 * {
     margin: 0;
@@ -71,7 +84,12 @@
 }
 
 /* Aplicar fuente globalmente PRIMERO - esto asegura que se aplique a todo */
-html, body, * {
+/* EXCEPCIÓN: Los heroes usan Berlin Sans, no Book Antigua */
+html, body {
+    font-family: 'Book Antigua', 'Georgia', serif !important;
+}
+
+* {
     font-family: 'Book Antigua', 'Georgia', serif !important;
 }
 
@@ -226,18 +244,24 @@ nav ul li a:hover::after {
 }
 
 .hero-content h1 {
-    font-family: var(--font-primary);
+    font-family: 'Berlin Sans', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
 }
 
 .hero-content p {
-    font-family: var(--font-primary);
+    font-family: 'Berlin Sans', 'Helvetica Neue', Arial, sans-serif !important;
     font-size: 1.3rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    font-weight: normal;
+}
+
+.hero-content * {
+    font-family: 'Berlin Sans', 'Helvetica Neue', Arial, sans-serif !important;
 }
 
 /* Botones */
