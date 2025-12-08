@@ -2,32 +2,6 @@
 
 // Smooth scroll para enlaces internos
 document.addEventListener('DOMContentLoaded', function() {
-    // Funcionalidad de búsqueda
-    const searchForm = document.querySelector('.search-container');
-    const searchInput = document.querySelector('.search-box input');
-    const searchButton = document.querySelector('.search-button');
-    
-    if (searchForm && searchInput && searchButton) {
-        function performSearch() {
-            const query = searchInput.value.trim();
-            if (query) {
-                // Redirigir a products.html con parámetro de búsqueda
-                window.location.href = `products.html?search=${encodeURIComponent(query)}`;
-            }
-        }
-        
-        searchButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            performSearch();
-        });
-        
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                performSearch();
-            }
-        });
-    }
     // Manejo de formulario de contacto
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
