@@ -51,8 +51,7 @@ header {
     align-items: center;
     text-decoration: none;
     transition: opacity 0.3s;
-    max-width: 600px !important;
-    min-width: 200px !important;
+    max-width: 400px !important;
     height: auto;
     flex-shrink: 0;
 }
@@ -62,23 +61,20 @@ header {
 }
 
 .logo img {
-    height: 200px !important;
+    height: 120px !important;
     width: auto !important;
-    max-width: 600px !important;
-    min-width: 200px !important;
+    max-width: 400px !important;
     object-fit: contain;
     display: block;
 }
 
 header .logo {
-    max-width: 600px !important;
-    min-width: 200px !important;
+    max-width: 400px !important;
 }
 
 header .logo img {
-    height: 200px !important;
-    max-width: 600px !important;
-    min-width: 200px !important;
+    height: 120px !important;
+    max-width: 400px !important;
     width: auto !important;
 }
 
@@ -415,10 +411,9 @@ footer {
 }
 
 .footer-logo img {
-    height: 300px !important;
+    height: 180px !important;
     width: auto !important;
-    max-width: 1200px !important;
-    min-width: 300px !important;
+    max-width: 720px !important;
     object-fit: contain;
     display: block;
     opacity: 0.95;
@@ -675,20 +670,17 @@ footer {
 
     .logo {
         font-size: 1.5rem;
-        max-width: 500px !important;
-        min-width: 150px !important;
+        max-width: 360px !important;
     }
 
     .logo img {
-        height: 150px !important;
-        max-width: 500px !important;
-        min-width: 150px !important;
+        height: 100px !important;
+        max-width: 360px !important;
     }
 
     .footer-logo img {
-        height: 200px !important;
-        max-width: 800px !important;
-        min-width: 200px !important;
+        height: 140px !important;
+        max-width: 560px !important;
     }
 }
 
