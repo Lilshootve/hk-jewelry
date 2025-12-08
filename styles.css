@@ -52,6 +52,7 @@ header {
     text-decoration: none;
     transition: opacity 0.3s;
     max-width: 400px !important;
+    min-width: 200px !important;
     height: auto;
     flex-shrink: 0;
 }
@@ -61,21 +62,26 @@ header {
 }
 
 .logo img {
-    height: 120px !important;
-    width: auto !important;
+    height: 80px !important;
+    width: 300px !important;
     max-width: 400px !important;
+    min-width: 200px !important;
     object-fit: contain;
     display: block;
 }
 
 header .logo {
     max-width: 400px !important;
+    min-width: 200px !important;
 }
 
 header .logo img {
-    height: 120px !important;
+    height: 80px !important;
+    width: 300px !important;
     max-width: 400px !important;
-    width: auto !important;
+    min-width: 200px !important;
+    max-height: 100px !important;
+    min-height: 50px !important;
 }
 
 .logo-text {
@@ -411,9 +417,12 @@ footer {
 }
 
 .footer-logo img {
-    height: 180px !important;
-    width: auto !important;
-    max-width: 720px !important;
+    height: 80px !important;
+    width: 300px !important;
+    max-width: 400px !important;
+    min-width: 200px !important;
+    max-height: 100px !important;
+    min-height: 50px !important;
     object-fit: contain;
     display: block;
     opacity: 0.95;
@@ -670,17 +679,26 @@ footer {
 
     .logo {
         font-size: 1.5rem;
-        max-width: 360px !important;
+        max-width: 400px !important;
+        min-width: 200px !important;
     }
 
     .logo img {
-        height: 100px !important;
-        max-width: 360px !important;
+        height: 70px !important;
+        width: 250px !important;
+        max-width: 400px !important;
+        min-width: 200px !important;
+        max-height: 100px !important;
+        min-height: 50px !important;
     }
 
     .footer-logo img {
-        height: 140px !important;
-        max-width: 560px !important;
+        height: 70px !important;
+        width: 250px !important;
+        max-width: 400px !important;
+        min-width: 200px !important;
+        max-height: 100px !important;
+        min-height: 50px !important;
     }
 }
 
