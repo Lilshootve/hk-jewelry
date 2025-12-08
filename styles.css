@@ -51,7 +51,7 @@ header {
     align-items: center;
     text-decoration: none;
     transition: opacity 0.3s;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
     flex-shrink: 0;
 }
@@ -61,20 +61,20 @@ header {
 }
 
 .logo img {
-    height: 90px;
+    height: 120px;
     width: auto;
-    max-width: 300px;
+    max-width: 400px;
     object-fit: contain;
     display: block;
 }
 
 header .logo {
-    max-width: 300px;
+    max-width: 400px;
 }
 
 header .logo img {
-    height: 90px !important;
-    max-width: 300px !important;
+    height: 120px !important;
+    max-width: 400px !important;
     width: auto !important;
 }
 
@@ -411,9 +411,9 @@ footer {
 }
 
 .footer-logo img {
-    height: 135px;
+    height: 180px;
     width: auto;
-    max-width: 540px;
+    max-width: 720px;
     object-fit: contain;
     display: block;
     opacity: 0.95;
@@ -670,17 +670,17 @@ footer {
 
     .logo {
         font-size: 1.5rem;
-        max-width: 270px;
+        max-width: 360px;
     }
 
     .logo img {
-        height: 75px;
-        max-width: 270px;
+        height: 100px;
+        max-width: 360px;
     }
 
     .footer-logo img {
-        height: 105px;
-        max-width: 420px;
+        height: 140px;
+        max-width: 560px;
     }
 }
 
