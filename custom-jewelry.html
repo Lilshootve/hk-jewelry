@@ -10,20 +10,44 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
+        <!-- First Row - Top Bar -->
+        <div class="header-top">
+            <a href="index.html" class="header-logo">
                 <img src="assets/logo.png" alt="HK Jewelry Corp Logo">
             </a>
-            <nav>
+            <div class="header-contact">
+                <a href="mailto:info@hkjewelry.com" class="header-contact-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <span>info@hkjewelry.com</span>
+                </a>
+                <a href="tel:+12345678911" class="header-contact-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <span>+1 (234) 567-8911</span>
+                </a>
+            </div>
+        </div>
+        <!-- Second Row - Main Navigation -->
+        <div class="header-main">
+            <nav class="header-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li><a href="custom-jewelry.html">Custom Jewelry</a></li>
-                    <li><a href="luxury-watches.html">Luxury Watches</a></li>
+                    <li><a href="luxury-watches.html">Watches</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="header-search">
+                <input type="text" class="header-search-input" id="headerSearchInput" placeholder="Search here …">
+                <svg class="header-search-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+            </div>
         </div>
     </header>
 
@@ -86,36 +110,66 @@
             <p style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
                 Explore our gallery of exclusive Custom by HK creations. Each piece shown is a one-of-a-kind design crafted by our master jewelers, showcasing the exceptional artistry and attention to detail that defines the Custom by HK collection.
             </p>
-            <div class="gallery">
-                <div class="gallery-item fade-in">
-                    <img src="assets/Relojes/18K White Gold Solitaire Diamond Engagement Ring.png" alt="18K White Gold Solitaire Diamond Engagement Ring">
-                    <div class="gallery-title">18K White Gold Solitaire Diamond Engagement Ring</div>
-                    <div class="gallery-description">Center stone: 1.80ct round brilliant-cut diamond. Setting: classic four-prong solitaire. Metal: 18K white gold. Band width: 2.2mm polished finish. Total diamond weight: 1.80ct.</div>
+            <div class="product-grid">
+                <div class="product-card fade-in">
+                    <img src="assets/products/18K White Gold Solitaire Diamond Engagement Ring.png" alt="Custom by HK – 18K White Gold Solitaire Diamond Engagement Ring">
+                    <div class="product-card-content">
+                        <span class="collection-badge">Custom by HK</span>
+                        <h3>Custom by HK – 18K White Gold Solitaire Diamond Engagement Ring</h3>
+                        <p>Exclusive design by HK Jewelry Corp. Center stone: 1.80ct round brilliant-cut diamond. Setting: classic four-prong solitaire. Metal: 18K white gold. Band width: 2.2mm polished finish. Total diamond weight: 1.80ct.</p>
+                        <p style="color: var(--color-gold); font-weight: bold; margin: 1rem 0;">Indicative Price: $12,500</p>
+                        <a href="contact.html" class="btn" style="width: 100%; text-align: center; display: block;">Inquire Now</a>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/Relojes/18K Yellow Gold Custom Name Necklace.png" alt="18K Yellow Gold Custom Name Necklace">
-                    <div class="gallery-title">18K Yellow Gold Custom Name Necklace</div>
-                    <div class="gallery-description">Name plate: custom script typography in solid 18K yellow gold. Chain type: fine cable chain, 18" length. Finish: high-polish mirror finish. Weight: approx. 6.5g gold. Personalized engraving available.</div>
+                <div class="product-card fade-in">
+                    <img src="assets/products/18K Yellow Gold Custom Name Necklace.png" alt="Custom by HK – 18K Yellow Gold Custom Name Necklace">
+                    <div class="product-card-content">
+                        <span class="collection-badge">Custom by HK</span>
+                        <h3>Custom by HK – 18K Yellow Gold Custom Name Necklace</h3>
+                        <p>Exclusive design by HK Jewelry Corp. Name plate: custom script typography in solid 18K yellow gold. Chain type: fine cable chain, 18" length. Finish: high-polish mirror finish. Weight: approx. 6.5g gold. Personalized engraving available.</p>
+                        <p style="color: var(--color-gold); font-weight: bold; margin: 1rem 0;">Indicative Price: $4,500</p>
+                        <a href="contact.html" class="btn" style="width: 100%; text-align: center; display: block;">Inquire Now</a>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/Relojes/18K Yellow Gold Cuban Link Diamond Bracelet.png" alt="18K Yellow Gold Cuban Link Diamond Bracelet">
-                    <div class="gallery-title">18K Yellow Gold Cuban Link Diamond Bracelet</div>
-                    <div class="gallery-description">Diamond setting: micro-pavé round diamonds across all links. Total diamond weight: 4.20ct. Link width: 12mm Cuban link. Clasp: diamond box lock with safety latch. Length: 8". Solid 18K yellow gold construction.</div>
+                <div class="product-card fade-in">
+                    <img src="assets/products/Miami Luxe Collection - Cuban Link Diamond Bracelet.png" alt="Custom by HK – 18K Yellow Gold Cuban Link Diamond Bracelet">
+                    <div class="product-card-content">
+                        <span class="collection-badge">Custom by HK</span>
+                        <h3>Custom by HK – 18K Yellow Gold Cuban Link Diamond Bracelet</h3>
+                        <p>Exclusive design by HK Jewelry Corp. Diamond setting: micro-pavé round diamonds across all links. Total diamond weight: 4.20ct. Link width: 12mm Cuban link. Clasp: diamond box lock with safety latch. Length: 8". Solid 18K yellow gold construction.</p>
+                        <p style="color: var(--color-gold); font-weight: bold; margin: 1rem 0;">Indicative Price: $19,800</p>
+                        <a href="contact.html" class="btn" style="width: 100%; text-align: center; display: block;">Inquire Now</a>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/Relojes/18K Yellow Gold Custom Mens Signet Ring with Initials.png" alt="18K Yellow Gold Custom Men's Signet Ring with Initials">
-                    <div class="gallery-title">18K Yellow Gold Custom Men's Signet Ring with Initials</div>
-                    <div class="gallery-description">Center plate: engraved custom initials. Accent stones: 0.30ct total weight round brilliant diamonds on side panel. Metal: solid 18K yellow gold. Ring face size: 14mm. High-polish luxury finish.</div>
+                <div class="product-card fade-in">
+                    <img src="assets/products/18K Yellow Gold Custom Mens Signet Ring with Initials.png" alt="Custom by HK – 18K Yellow Gold Custom Men's Signet Ring with Initials">
+                    <div class="product-card-content">
+                        <span class="collection-badge">Custom by HK</span>
+                        <h3>Custom by HK – 18K Yellow Gold Custom Men's Signet Ring with Initials</h3>
+                        <p>Exclusive design by HK Jewelry Corp. Center plate: engraved custom initials. Accent stones: 0.30ct total weight round brilliant diamonds on side panel. Metal: solid 18K yellow gold. Ring face size: 14mm. High-polish luxury finish.</p>
+                        <p style="color: var(--color-gold); font-weight: bold; margin: 1rem 0;">Indicative Price: $3,800</p>
+                        <a href="contact.html" class="btn" style="width: 100%; text-align: center; display: block;">Inquire Now</a>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/Relojes/18K White Gold Diamond Drop Earrings.png" alt="18K White Gold Diamond Drop Earrings">
-                    <div class="gallery-title">18K White Gold Diamond Drop Earrings</div>
-                    <div class="gallery-description">Diamond layout: cascading round brilliant diamonds. Total diamond weight: 2.60ct. Metal: solid 18K white gold. Length: 38mm. Backing: secure push-back with safety lock. Designed for evening and formal wear.</div>
+                <div class="product-card fade-in">
+                    <img src="assets/products/18K White Gold Diamond Drop Earrings.png" alt="Custom by HK – 18K White Gold Diamond Drop Earrings">
+                    <div class="product-card-content">
+                        <span class="collection-badge">Custom by HK</span>
+                        <h3>Custom by HK – 18K White Gold Diamond Drop Earrings</h3>
+                        <p>Exclusive design by HK Jewelry Corp. Diamond layout: cascading round brilliant diamonds. Total diamond weight: 2.60ct. Metal: solid 18K white gold. Length: 38mm. Backing: secure push-back with safety lock. Designed for evening and formal wear.</p>
+                        <p style="color: var(--color-gold); font-weight: bold; margin: 1rem 0;">Indicative Price: $8,900</p>
+                        <a href="contact.html" class="btn" style="width: 100%; text-align: center; display: block;">Inquire Now</a>
+                    </div>
                 </div>
-                <div class="gallery-item fade-in">
-                    <img src="assets/Relojes/18K Gold Custom Initial Pendant with Pavé Diamonds.png" alt="18K Gold Custom Initial Pendant with Pavé Diamonds">
-                    <div class="gallery-title">18K Gold Custom Initial Pendant with Pavé Diamonds</div>
-                    <div class="gallery-description">Initial design: modern capital letter with full pavé diamond setting. Total diamond weight: 0.95ct. Metal: solid 18K yellow gold. Chain: fine gold chain, 18" length. Contemporary minimal luxury style.</div>
+                <div class="product-card fade-in">
+                    <img src="assets/products/18K Gold Custom Initial Pendant with Pavé Diamonds.png" alt="Custom by HK – 18K Gold Custom Initial Pendant with Pavé Diamonds">
+                    <div class="product-card-content">
+                        <span class="collection-badge">Custom by HK</span>
+                        <h3>Custom by HK – 18K Gold Custom Initial Pendant with Pavé Diamonds</h3>
+                        <p>Exclusive design by HK Jewelry Corp. Initial design: modern capital letter with full pavé diamond setting. Total diamond weight: 0.95ct. Metal: solid 18K yellow gold. Chain: fine gold chain, 18" length. Contemporary minimal luxury style.</p>
+                        <p style="color: var(--color-gold); font-weight: bold; margin: 1rem 0;">Indicative Price: $6,200</p>
+                        <a href="contact.html" class="btn" style="width: 100%; text-align: center; display: block;">Inquire Now</a>
+                    </div>
                 </div>
             </div>
         </div>
