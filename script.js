@@ -51,5 +51,31 @@ document.addEventListener('DOMContentLoaded', function() {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+
+    // Funcionalidad de búsqueda
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    
+    if (searchInput && searchButton) {
+        // Buscar al hacer clic en el botón
+        searchButton.addEventListener('click', function() {
+            performSearch();
+        });
+        
+        // Buscar al presionar Enter
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    }
+    
+    function performSearch() {
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm) {
+            // Redirigir a página de productos con parámetro de búsqueda
+            window.location.href = `products.html?search=${encodeURIComponent(searchTerm)}`;
+        }
+    }
 });
 
