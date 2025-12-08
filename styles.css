@@ -303,6 +303,8 @@ nav ul li a {
     color: var(--color-white);
     text-decoration: none;
     font-size: 0.95rem;
+    font-family: var(--font-secondary);
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s;
@@ -345,11 +347,14 @@ nav ul li a:hover::after {
 .hero-content h1 {
     font-family: var(--font-primary);
     font-size: 3.5rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
+    font-family: var(--font-secondary);
+    font-weight: 500;
     font-size: 1.3rem;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
