@@ -8,26 +8,65 @@
     <!-- Preload fonts for better performance -->
     <link rel="preload" href="assets/fonts/BOOKOS - tgmark.net.TTF" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/fonts/BOOKOSB - tgmark.net.TTF" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="assets/fonts/BKANT - tgmark.net.TTF" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/fonts/Bellerose - tgmark.net.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="HK Jewelry Corp Logo">
-            </a>
-            <nav>
+        <!-- Fila Superior -->
+        <div class="header-top">
+            <!-- Izquierda: Logo -->
+            <div class="header-logo">
+                <a href="index.html">
+                    <img src="assets/logo.png" alt="HK Jewelry Corp Logo">
+                </a>
+            </div>
+            
+            <!-- Centro: Email y Teléfono -->
+            <div class="header-contact">
+                <a href="mailto:info@hkjewelrycorp.com" class="header-contact-item">
+                    <svg class="header-contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>store@lasvillasjewelry.com</span>
+                </a>
+                <a href="tel:+12345678911" class="header-contact-item">
+                    <svg class="header-contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 16.42V19.956C22.001 20.212 21.944 20.465 21.833 20.695C21.723 20.925 21.562 21.125 21.363 21.28C21.164 21.435 20.932 21.542 20.686 21.591C20.44 21.64 20.186 21.63 19.945 21.561C17.139 20.779 14.461 19.658 11.979 18.237C9.686 16.961 7.64 15.315 5.91 13.37C4.18 11.425 2.794 9.207 1.8 6.8C1.268 5.459 0.916 4.051 0.752 2.62C0.717 2.288 0.765 1.952 0.892 1.644C1.019 1.336 1.22 1.066 1.475 0.86C1.73 0.654 2.03 0.519 2.347 0.467C2.664 0.415 2.988 0.447 3.29 0.56L6.638 1.906C6.933 2.018 7.197 2.196 7.409 2.425C7.621 2.654 7.775 2.928 7.861 3.224C7.944 3.515 7.966 3.822 7.925 4.122C7.884 4.422 7.781 4.708 7.624 4.96L5.818 8.52C6.798 10.547 8.237 12.318 10.033 13.695C11.829 15.072 13.936 16.02 16.2 16.46L19.045 14.48C19.299 14.323 19.587 14.225 19.888 14.194C20.189 14.163 20.494 14.2 20.778 14.301C21.062 14.403 21.318 14.566 21.527 14.778C21.736 14.99 21.893 15.246 21.986 15.526L22 16.42Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>305-394-2897</span>
+                </a>
+            </div>
+            
+            <!-- Derecha: Vacío -->
+            <div class="header-right"></div>
+        </div>
+        
+        <!-- Fila Inferior -->
+        <div class="header-bottom">
+            <!-- Menú Centrado -->
+            <nav class="header-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="custom-jewelry.html">Custom Jewelry</a></li>
-                    <li><a href="luxury-watches.html">Luxury Watches</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="products.html">PRODUCTS</a></li>
+                    <li><a href="custom-jewelry.html">CUSTOM JEWELRY</a></li>
+                    <li><a href="luxury-watches.html">WATCHES</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
+            
+            <!-- Búsqueda -->
+            <div class="header-search">
+                <input type="text" class="header-search-input" placeholder="Search here..." />
+                <svg class="header-search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                    <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
         </div>
     </header>
 

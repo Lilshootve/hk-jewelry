@@ -41,24 +41,11 @@
     font-display: swap;
 }
 
-/* Fuente Berlin Sans para Heroes */
-/* Si tienes el archivo de Berlin Sans, actualiza la ruta aquí: */
+/* Fuente Berlin Sans (BKANT) para Heroes */
 @font-face {
     font-family: 'Berlin Sans';
-    src: url('assets/fonts/Berlin-Sans.ttf') format('truetype'),
-         url('assets/fonts/BerlinSans-Regular.ttf') format('truetype'),
-         url('assets/fonts/BerlinSans.otf') format('opentype');
+    src: url('assets/fonts/BKANT - tgmark.net.TTF') format('truetype');
     font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Berlin Sans';
-    src: url('assets/fonts/Berlin-Sans-Bold.ttf') format('truetype'),
-         url('assets/fonts/BerlinSans-Bold.ttf') format('truetype'),
-         url('assets/fonts/BerlinSans-Bold.otf') format('opentype');
-    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -81,6 +68,7 @@
     --font-primary: 'Book Antigua', 'Georgia', serif !important;
     --font-secondary: 'Book Antigua', 'Georgia', serif !important;
     --font-decorative: 'Bellerose', cursive !important;
+    --font-hero: 'Berlin Sans', 'Helvetica Neue', Arial, sans-serif !important;
 }
 
 /* Aplicar fuente globalmente PRIMERO - esto asegura que se aplique a todo */
@@ -121,112 +109,236 @@ select {
 
 /* Header y Navegación */
 header {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    padding: 1rem 0;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.header-top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 12px 32px;
+    border-bottom: 1px solid #e5e5e5;
 }
 
-.logo {
+.header-logo {
+    flex-shrink: 0;
+}
+
+.header-logo a {
     display: flex;
     align-items: center;
     text-decoration: none;
     transition: opacity 0.3s;
-    max-width: 400px !important;
-    min-width: 200px !important;
-    height: auto;
-    flex-shrink: 0;
 }
 
-.logo:hover {
-    opacity: 0.8;
-}
-
-.logo img {
-    height: 80px !important;
-    width: 300px !important;
-    max-width: 400px !important;
-    min-width: 200px !important;
+.header-logo img {
+    height: 60px;
+    width: auto;
+    max-width: 300px;
     object-fit: contain;
     display: block;
 }
 
-header .logo {
-    max-width: 400px !important;
-    min-width: 200px !important;
+.header-logo a:hover {
+    opacity: 0.8;
 }
 
-header .logo img {
-    height: 80px !important;
-    width: 300px !important;
-    max-width: 400px !important;
-    min-width: 200px !important;
-    max-height: 100px !important;
-    min-height: 50px !important;
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+    justify-content: center;
 }
 
-.logo-text {
-    font-family: var(--font-decorative);
-    font-size: 1.8rem;
-    font-weight: normal;
+.header-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Book Antigua', 'Georgia', serif;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header-contact-item:hover {
     color: var(--color-gold);
-    letter-spacing: 2px;
-    margin-left: 10px;
 }
 
-.logo:hover .logo-text {
-    color: var(--color-gold-light);
+.header-contact-icon {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
-nav ul {
+.header-right {
+    width: 150px; /* Mantiene espacio vacío pero centrado */
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+}
+
+.header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header-nav ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li a {
-    color: var(--color-white);
+.header-nav ul li a {
+    color: var(--color-black);
     text-decoration: none;
-    font-size: 0.95rem;
-    font-family: var(--font-primary);
-    font-weight: bold;
+    font-family: 'Book Antigua', 'Georgia', serif;
+    font-size: 0.875rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.15em;
     transition: color 0.3s;
     position: relative;
+    white-space: nowrap;
 }
 
-nav ul li a:hover {
+.header-nav ul li a:hover {
     color: var(--color-gold);
 }
 
-nav ul li a::after {
+.header-nav ul li a::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
     background-color: var(--color-gold);
     transition: width 0.3s;
 }
 
-nav ul li a:hover::after {
+.header-nav ul li a:hover::after {
     width: 100%;
+}
+
+.header-search {
+    width: 320px;
+    position: relative;
+}
+
+.header-search-input {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    font-family: 'Book Antigua', 'Georgia', serif;
+    font-size: 0.875rem;
+    color: var(--color-text);
+    background-color: var(--color-white);
+    transition: border-color 0.3s;
+}
+
+.header-search-input:focus {
+    outline: none;
+    border-color: var(--color-gold);
+}
+
+.header-search-input::placeholder {
+    color: #999;
+}
+
+.header-search-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: #666;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+
+/* Responsive para Header */
+@media (max-width: 1024px) {
+    .header-search {
+        width: 250px;
+    }
+    
+    .header-nav ul {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+    
+    .header-contact {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .header-right {
+        display: none;
+    }
+    
+    .header-bottom {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 20px;
+    }
+    
+    .header-nav {
+        width: 100%;
+    }
+    
+    .header-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+    
+    .header-search {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .header-nav ul li a {
+        font-size: 0.8rem;
+    }
 }
 
 /* Hero Section */
@@ -260,6 +372,7 @@ nav ul li a:hover::after {
     font-weight: normal;
 }
 
+.hero-content,
 .hero-content * {
     font-family: 'Berlin Sans', 'Helvetica Neue', Arial, sans-serif !important;
 }
