@@ -1076,7 +1076,7 @@ nav ul li a:hover::after {
 }
 
 .product-card.no-image p {
-    color: #e0e0e0;
+    color: var(--color-black);
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 1rem;
