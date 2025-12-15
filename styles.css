@@ -1040,14 +1040,14 @@ nav ul li a:hover::after {
     border-color: var(--color-gold-light);
 }
 
-.product-card.no-image .product-icon::after {
-    content: '💎';
-    font-size: 2.5rem;
+.product-card.no-image .product-icon svg {
+    width: 48px;
+    height: 48px;
     filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.7));
-    transition: transform 0.3s;
+    transition: transform 0.3s, filter 0.3s;
 }
 
-.product-card.no-image:hover .product-icon::after {
+.product-card.no-image:hover .product-icon svg {
     transform: scale(1.2);
     filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.9));
 }
